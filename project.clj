@@ -1,4 +1,4 @@
-(defproject io.lambdaforge/datalog-parser "0.1.8-SNAPSHOT"
+(defproject timokramer/datalog-parser "0.1.8-SNAPSHOT"
   :description  "Datalog parser."
   :url          "https://github.com/lambdaforge/datalog-parser"
   :license      {:name "EPL 1.0"
@@ -9,4 +9,10 @@
   :profiles {:dev {:source-paths ["perf"]
                    :dependencies [[com.clojure-goes-fast/clj-async-profiler "0.4.1"]
                                   [criterium "0.4.5"]]}}
-  :repl-options {:init-ns datalog.parser})
+  :repl-options {:init-ns datalog.parser}
+  :deploy-repositories
+    [["clojars"
+      {:url           "https://clojars.org/repo"
+       :username      :env
+       :password      :env
+       :sign-releases false}]])
